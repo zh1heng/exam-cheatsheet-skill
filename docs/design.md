@@ -14,6 +14,8 @@ Follow-up requirements: apply a claim-specific course-source hierarchy including
 
 Language design: allocate question-language aliases to recognition, the student's strongest language to reasoning and executable steps, and the required answer language to terminology and answer patterns. Avoid full-paragraph bilingual duplication; preserve code and mathematical notation and test the bridges between these roles.
 
+2026-11-12 follow-up: deliver a usable initial v1 after basic checks, then apply scoped user-driven revisions. Full independent acceptance belongs before a final claim, not before sharing the draft. Repeated identical code may use locally defined @ snippets with explicit in-place expansion, parameter rules and equivalence checks; branch-specific behavior stays visible.
+
 Repository contents are reusable instructions and original examples. They do not include course source files or private student records. No standalone renderer, account integration, or automatic tutoring system is included.
 
 Validation: validate skill metadata and references; check example arithmetic and algorithm trace; run an independent behavioral exercise with synthetic source facts; report limited scope honestly. No course marks, future exam outcomes, student lookup speed, or physical print quality are claimed.

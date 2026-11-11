@@ -25,3 +25,7 @@ Delivered repository: https://github.com/zh1heng/exam-cheatsheet-skill (private)
 - [x] Explain language roles for recognition, reasoning, course terms and exam answers instead of repeated full translation.
 - [x] Run an independent constraint-conflict audit and a blind text-question repair/retest cycle.
 - [x] Finish language-role exercise, structural validation and local installation sync. Publication is recorded by repository history.
+
+## 2026-11-12 follow-up
+
+Add explicit v1 delivery before exhaustive personalization/final acceptance, preserve scoped user-driven iterations, and document @ shared code definitions and expansion. A fresh agent exercised the revised workflow, expanded both sorting branches and checked a complete trace. Structural checks, installation synchronization and publication accompany this revision.

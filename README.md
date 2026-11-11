@@ -6,7 +6,11 @@
 
 ## 方法
 
-**课程证据与考试限制 → 题目原词 → 小抄入口 → 判断条件 → 操作步骤 → 作答模板 → 独立 agent 做题 → 修复与复测 → 最终排版验收。**
+**课程证据与考试限制 → 可用 v1 初稿 → 用户反馈与逐步修改 → 独立 agent 做题 → 修复与复测 → 最终排版验收。**
+
+先让使用者拿到初版，不必先回答一长串偏好问题，也不必等所有最终验收轮次结束。初版有基本内容与版面检查，待核实或待验收的部分明确标注；后续按实际需求修改，保留旧版和熟悉的编号。
+
+每个条目的内部结构是：**题目原词 → 小抄入口 → 判断条件 → 操作步骤 → 作答模板。**
 
 例如，题目说 `connect all sites with minimum total cable length`，小抄入口就应包含 `connect all / minimum total cost`，再桥接到 MST。只在正文里出现 MST，不足以证明学生能找到它。
 
@@ -27,7 +31,7 @@
 
 示例请求：
 
-> 使用 $exam-cheatsheet，根据课程文件夹、老师录音转录和本次考试通知制作小抄。先确定是否只允许单面，不默认双面。中文用于判断步骤，英文用于考试答案，有效印刷字号不低于 5pt。保留旧版，让独立 agent 实际做代表题，根据反馈修复、复测，再验收标题配色、底色和打印布局。
+> 使用 $exam-cheatsheet，根据课程文件夹、老师录音转录和本次考试通知先出可用 v1，再按我的反馈慢慢修改。先确定是否只允许单面，不默认双面。中文用于判断步骤，英文用于考试答案，有效印刷字号不低于 5pt；重复代码可用定义清楚的 @ 片段压缩。保留旧版，最终版让独立 agent 实际做代表题，根据反馈修复、复测，再验收标题配色、底色和打印布局。
 
 已有小抄也可以直接审查：
 
@@ -40,6 +44,7 @@
 - [`references/source-priority.md`](skills/exam-cheatsheet/references/source-priority.md)：课程资料优先级、老师录音转录核验、单/双面等考试限制。
 - [`references/language-design.md`](skills/exam-cheatsheet/references/language-design.md)：不同语言在识题、理解、判断、术语与作答中的分工。
 - [`references/peer-review-and-layout.md`](skills/exam-cheatsheet/references/peer-review-and-layout.md)：独立 agent 做题、反馈修复循环、5pt 下限和标题/配色/打印验收。
+- [`references/code-shorthand.md`](skills/exam-cheatsheet/references/code-shorthand.md)：用 `@名称` 引用相同代码，定义、原地展开与正确性核验。
 - [`examples/keyword-to-answer.md`](skills/exam-cheatsheet/examples/keyword-to-answer.md)：原创示例，展示如何从题目措辞找到方法与答案。
 - [`docs/validation.md`](docs/validation.md)：本项目实际执行的验证及其限制。
 
@@ -48,6 +53,7 @@
 - 历史考题帮助识别问法、方法和变式；出现频率不等于今年的考题概率。
 - 版面兼顾本学期范围、易错条件、查用价值和学生需求。不要因为某类题以前常考，就默认让它挤占其他内容。
 - 先压缩重复表达，再处理布局。字体缩小不等于信息设计完成。
+- 相同代码可以用 `@名称` 共用片段；定义在小抄上写全，展开后保持逻辑不变。考试需要完整代码时应展开，不能把未定义的 @ 标记直接抄进答案。
 - 老师录音中的明确范围、纠错和答题要求要提取并定位；转录不清或与正式通知冲突时核实，不能把强调当成必考保证。
 - 单面要求是硬性版面限制；一张纸不自动等于允许双面。最小有效印刷字号 5pt 是下限，不是全篇默认值。
 - 大标题用字号、颜色与底色建立层级，解释和答案模板区分；黑白打印仍能靠文字标签和结构辨认。

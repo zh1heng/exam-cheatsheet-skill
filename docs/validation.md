@@ -62,3 +62,11 @@ The retest agent reported using only ordinary arithmetic/graph reading beyond th
 Using the new language reference and supplied fictional interview facts, an independent agent produced a `main flaw / useful information` entry: English question aliases for navigation, Chinese evidence-to-effect reasoning, and an English leading-question answer. It explained placeholders and avoided duplicating the whole Chinese explanation in English.
 
 The same reviewer identified a real omission in the language reference's Prim example: graph preconditions and disconnected-graph termination were implicit. The author added both explicitly; the focused independent recheck confirmed the issue resolved while preserving the intended language roles. This is a content correction prompted by actual feedback, not a claim that a correct translation alone establishes understanding.
+
+## 2026-11-12: initial delivery and @ code compression
+
+A focused pre-change review found that scoped revisions already existed, but the skill did not explicitly separate early v1 delivery from final acceptance and had no @ expansion convention. The update adds both without relaxing basic correctness or known exam-format requirements.
+
+A fresh agent used the revised skill to produce an actual text-only 0/1/2 sorting entry from supplied branches. It delivered v1 without postponing it for final acceptance, defined @SWAP locally, retained distinct pointer updates and explained the temporary variable. It then self-expanded both references and traced [2,0,1] through [1,0,2], [1,0,2], [0,1,2], ending with low=1, mid=2, high=1. The main author checked the expanded branches and trace against the supplied original behavior.
+
+This was an independent exercise of the skill, followed by the drafting agent's self-check of its candidate; it was not a second blind solver's final acceptance of that candidate. The agent correctly distinguished those claims and did not claim PDF, font-size or print verification. Structural validation and Markdown reference checks also passed. No executable macro preprocessor or actual sheet layout was added or tested.

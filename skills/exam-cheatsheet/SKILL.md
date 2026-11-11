@@ -15,6 +15,12 @@ Before selecting content, read [source-priority.md](references/source-priority.m
 
 Keep the workflow within the request: an audit need not trigger a redesign; making a sheet need not trigger tutoring. Respect a student's chosen question pool. For a new sheet, use current course materials to establish coverage and questions to establish how knowledge is applied.
 
+## Deliver a first version, then personalize
+
+Default to producing a usable **v1 draft** from available course evidence and known user preferences. Do not postpone it for a long preference interview, exhaustive personalization, or all final acceptance rounds. Apply known exam constraints, check essential content and the rendered layout when generating a document, and disclose specific unknowns and pending checks. Share the actual draft, not merely a proposed structure; do not label it final or independently accepted before those checks occur.
+
+Use the user's subsequent requests and observed difficulties to make scoped v2/v3 revisions. Preserve the previous usable/printed version and stable entry IDs. Record what changed and why; recheck affected content and layout. User-directed revision can continue after an internal review round limit; that limit does not cap the lifetime of the sheet. Keep an established working version instead of restarting the whole design for each preference.
+
 ## Build from questions
 
 1. Inventory current topics and sources. Distinguish verified current instructions, original questions, teacher answers, inferred answer advice, and generated examples. Preserve precise source locators in a companion audit; never invent marks or an official rubric.
@@ -22,12 +28,13 @@ Keep the workflow within the request: an audit need not trigger a redesign; maki
 3. Use recognizable question words as visible headings or aliases with stable IDs. Add a reasoning bridge for scenarios that do not name the concept. Do not require the student to know the answer before locating the entry.
 4. Write each entry as **trigger → decision criteria → steps → required output → answer pattern → trap**. Allocate languages by function: question-language aliases for recognition, the student's strongest language for decisions/steps, and exam-answer language for precise terms and usable sentences. Preserve code and mathematical notation. Avoid duplicating whole paragraphs through translation. Explain placeholders and conditions. Read [language-design.md](references/language-design.md) when building multilingual entries and [entry-and-audit.md](references/entry-and-audit.md) for the entry format and audit.
 5. Allocate space by current scope, task diversity, likely lookup difficulty, and the student's priorities. Historical occurrence is descriptive, not an exam probability. Flag the tradeoff if a requested allocation crowds out confirmed topics; respect the user's final choice. Compress duplicate explanations before shrinking text.
+6. Repeated identical code may use visible `@NAME` shared snippets to save space. Define every reference on the permitted sheet, explain literal in-place expansion and any explicit parameters, and verify expansion preserves the original code. Keep differing conditions/control flow explicit. Read [code-shorthand.md](references/code-shorthand.md) when using this notation; it is sheet shorthand, not automatically valid submitted code.
 
 Use [the original worked example](examples/keyword-to-answer.md) when a concrete illustration would help. Adapt its structure, not its topic choices or language assumptions.
 
 ## Verify and iterate
 
-For a new sheet or substantial revision, run at least one independent agent through actual representative questions using the candidate sheet, then repair and retest from its evidence. Read [peer-review-and-layout.md](references/peer-review-and-layout.md) for the blind attempt, separate correctness review, feedback log, and bounded loop. A targeted edit needs affected cases and nearby regression checks, not a full-course rerun. If agent tools are unavailable or the user declines delegation, label the self-check as such; never claim independent acceptance.
+Before declaring a new sheet or substantial revision final, run at least one independent agent through actual representative questions using the candidate sheet, then repair and retest from its evidence. This final acceptance stage does not block sharing the earlier v1 draft. Read [peer-review-and-layout.md](references/peer-review-and-layout.md) for the blind attempt, separate correctness review, feedback log, and bounded loop. A targeted edit needs affected cases and nearby regression checks, not a full-course rerun. If agent tools are unavailable or the user declines delegation, label the self-check as such; never claim independent acceptance.
 
 Choose representative source questions plus necessary variants. Starting from the question wording and the actual latest sheet, record the entry reached, conditions checked, required adaptation, and whether the sheet supports the requested output. Identify missing content, missing navigation, missing reasoning, and incorrect answers separately. Assistant walkthroughs are not evidence of student speed or independent mastery.
 
