@@ -1,0 +1,4 @@
+interface:
+  display_name: "Exam Cheatsheet"
+  short_description: "Build exam sheets students can find and apply"
+  default_prompt: "Use $exam-cheatsheet to create or audit a reference sheet from my course materials, question wording, and exam constraints."

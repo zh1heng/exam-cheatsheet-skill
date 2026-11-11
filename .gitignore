@@ -1,0 +1,11 @@
+# Course inputs and personal working material stay outside the reusable project.
+/course-materials/
+/student-records/
+/private/
+/output/
+/tmp/
+__pycache__/
+.DS_Store
+Thumbs.db
+.env
+.env.*
