@@ -1,4 +1,4 @@
-# Exam Cheatsheet Skill
+# Cheatsheet Master · 小抄高手
 
 把课程资料整理成**看见题目就能找到入口、判断方法并写出答案**的考试小抄。
 
@@ -27,28 +27,42 @@
 
 ## 使用
 
-项目中的 skill 位于 [`skills/exam-cheatsheet`](skills/exam-cheatsheet/SKILL.md)。把整个 `exam-cheatsheet` 文件夹复制到所用 AI 工具支持的 skills 目录，或在对话中明确提供该 `SKILL.md` 和相邻参考文件。不同客户端的自动发现方式可能不同。
+项目中的 skill 位于 [`skills/cheatsheet-master`](skills/cheatsheet-master/SKILL.md)。把整个 `cheatsheet-master` 文件夹复制到所用 AI 工具支持的 skills 目录，或在对话中明确提供该 `SKILL.md` 和相邻参考文件。不同客户端的自动发现方式可能不同。
+
+Codex 用户可以直接发送以下安装请求：
+
+```text
+使用 $skill-installer 安装 https://github.com/zh1heng/exam-cheatsheet-skill
+中的 skills/cheatsheet-master 技能。
+```
+
+技能现名 **Cheatsheet Master（小抄高手）**，调用名为 `$cheatsheet-master`。已安装旧版的用户更新时应以新目录替换旧 `exam-cheatsheet` 目录，避免两套规则并存。GitHub 仓库地址保持不变。
 
 示例请求：
 
-> 使用 $exam-cheatsheet，根据课程文件夹、老师录音转录和本次考试通知先出可用 v1，再按我的反馈慢慢修改。先确定是否只允许单面，不默认双面。中文用于判断步骤，英文用于考试答案，有效印刷字号不低于 5pt；重复代码可用定义清楚的 @ 片段压缩。保留旧版，最终版让独立 agent 实际做代表题，根据反馈修复、复测，再验收标题配色、底色和打印布局。
+> 使用 $cheatsheet-master，根据课程文件夹、老师录音转录和本次考试通知先出可用 v1，再按我的反馈慢慢修改。先确定是否只允许单面，不默认双面。中文用于判断步骤，英文用于考试答案，有效印刷字号不低于 5pt；重复代码可用定义清楚的 @ 片段压缩。按有依据的考试题型顺序分区；顺序证据不足两份时告诉我实际排序依据。最终版先把全部题目分类，每类选代表题独立实际作答；仅换数据的同类题不重复做，解法、条件或输出变化的题保留必要变式。实测题小抄支持率至少90%，复核关键项与定位；修改后只复测受影响部分，再验收打印布局。报告哪些实测、哪些仅分类。
 
 已有小抄也可以直接审查：
 
-> 使用 $exam-cheatsheet，检查这些题目能否在我的小抄上直接找到入口。分别报告内容缺失、定位困难、步骤不足和排版问题，只修改我指定的部分。
+> 使用 $cheatsheet-master，检查这些题目能否在我的小抄上直接找到入口。分别报告内容缺失、定位困难、步骤不足和排版问题，只修改我指定的部分。
 
 ## 项目内容
 
-- [`SKILL.md`](skills/exam-cheatsheet/SKILL.md)：何时使用、制作流程与交付要求。
-- [`references/entry-and-audit.md`](skills/exam-cheatsheet/references/entry-and-audit.md)：条目结构、覆盖表与验证标准。
-- [`references/source-priority.md`](skills/exam-cheatsheet/references/source-priority.md)：课程资料优先级、老师录音转录核验、单/双面等考试限制。
-- [`references/language-design.md`](skills/exam-cheatsheet/references/language-design.md)：不同语言在识题、理解、判断、术语与作答中的分工。
-- [`references/peer-review-and-layout.md`](skills/exam-cheatsheet/references/peer-review-and-layout.md)：独立 agent 做题、反馈修复循环、5pt 下限和标题/配色/打印验收。
-- [`references/code-shorthand.md`](skills/exam-cheatsheet/references/code-shorthand.md)：用 `@名称` 引用相同代码，定义、原地展开与正确性核验。
-- [`examples/keyword-to-answer.md`](skills/exam-cheatsheet/examples/keyword-to-answer.md)：原创示例，展示如何从题目措辞找到方法与答案。
+- [`SKILL.md`](skills/cheatsheet-master/SKILL.md)：何时使用、制作流程与交付要求。
+- [`references/entry-and-audit.md`](skills/cheatsheet-master/references/entry-and-audit.md)：条目结构、覆盖表与验证标准。
+- [`references/source-priority.md`](skills/cheatsheet-master/references/source-priority.md)：课程资料优先级、老师录音转录核验、单/双面等考试限制。
+- [`references/language-design.md`](skills/cheatsheet-master/references/language-design.md)：不同语言在识题、理解、判断、术语与作答中的分工。
+- [`references/peer-review-and-layout.md`](skills/cheatsheet-master/references/peer-review-and-layout.md)：独立 agent 做题、反馈修复循环、5pt 下限和标题/配色/打印验收。
+- [`references/acceptance-harness.md`](skills/cheatsheet-master/references/acceptance-harness.md)：仅明确要求全量逐题验收时使用的严格状态、90%门槛与JSON证据契约。
+- [`scripts/audit_harness.py`](skills/cheatsheet-master/scripts/audit_harness.py)：可选的严格全量账本检查器；默认代表题验收不运行此脚本，不支持分类映射或增量证据。
+- [`references/code-shorthand.md`](skills/cheatsheet-master/references/code-shorthand.md)：用 `@名称` 引用相同代码，定义、原地展开与正确性核验。
+- [`examples/keyword-to-answer.md`](skills/cheatsheet-master/examples/keyword-to-answer.md)：原创示例，展示如何从题目措辞找到方法与答案。
 - [`docs/validation.md`](docs/validation.md)：本项目实际执行的验证及其限制。
 
 ## 几条关键取舍
+
+- 默认全量分类、代表题实际作答，不逐题重做同类数据变式；保留真正改变解法的差异。
+- 内容修改只复测受影响的代表题；排版修改只查最终渲染及受影响定位。全量逐题验收仅在明确要求时启用。
 
 - 历史考题帮助识别问法、方法和变式；出现频率不等于今年的考题概率。
 - 版面兼顾本学期范围、易错条件、查用价值和学生需求。不要因为某类题以前常考，就默认让它挤占其他内容。
@@ -63,4 +77,4 @@
 
 仓库提供通用方法和原创示例。具体课程的讲义、试卷、录音和个人学习记录由使用者在自己的工作区提供。
 
-当前版本提供工作流程与示例；PDF/DOCX 的生成依赖运行环境已有的文档工具，没有附带独立排版程序。
+当前版本提供工作流程、示例和验收账本检查脚本；主 agent 负责调度独立解题与修复。PDF/DOCX 的生成依赖运行环境已有的文档工具，没有附带独立排版程序。支持率不是预计考试得分，也不是学生独立掌握率。

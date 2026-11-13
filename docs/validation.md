@@ -70,3 +70,35 @@ A focused pre-change review found that scoped revisions already existed, but the
 A fresh agent used the revised skill to produce an actual text-only 0/1/2 sorting entry from supplied branches. It delivered v1 without postponing it for final acceptance, defined @SWAP locally, retained distinct pointer updates and explained the temporary variable. It then self-expanded both references and traced [2,0,1] through [1,0,2], [1,0,2], [0,1,2], ending with low=1, mid=2, high=1. The main author checked the expanded branches and trace against the supplied original behavior.
 
 This was an independent exercise of the skill, followed by the drafting agent's self-check of its candidate; it was not a second blind solver's final acceptance of that candidate. The agent correctly distinguished those claims and did not claim PDF, font-size or print verification. Structural validation and Markdown reference checks also passed. No executable macro preprocessor or actual sheet layout was added or tested.
+
+## 2026-11-12: exhaustive acceptance and evidence-ledger harness
+
+The skill now requires exhaustive in-scope question attempts by additional independent agents, question-type regions, order-evidence disclosure when fewer than two independent applicable sources exist, and at least 90% weighted sheet support for each complete correct answer. Template contributions form a union of answer units; critical unsupported units still fail. Transfer and boundary variants test stated applicability without claiming universal generality.
+
+A read-only baseline agent identified absent percentage/denominator/combination rules, absent order-evidence disclosure and a gap in unseen transfer testing. The update adds a state/evidence contract and the standard-library `audit_harness.py` checker. It does not launch agents, grade answers semantically, render PDFs or independently discover source questions.
+
+Validation performed on the revised source and installed skill:
+
+- 20 synthetic unit/CLI tests passed, including the exact 90% boundary, weighted template unions, external critical knowledge, wrong answer units, missing/duplicate/extra IDs, candidate hashes, separate role identifiers, transfer/boundary requirements, explicit cross-region navigation links, duplicate/conflicting order evidence and numerical edge cases.
+- An independent reviewer reproduced an output hard-link overwrite vulnerability and ambiguous row-based statistics. These were repaired; the reviewer retested hard links to both input files, rejected extreme weights without malformed reports, verified expected-ID statistics and rejected invalid navigation/relabelled variant records. No blocking issue remained in that review.
+- Both skill frontmatter validations passed; 26 local Markdown link targets resolved; all six changed/added installed skill files matched the source checkout byte-for-byte.
+
+These tests use synthetic evidence ledgers, not real exam questions. They establish checker behavior and recorded-evidence gates, not rubric validity, genuine actor independence, comprehensive source discovery, unseen-variant quality, measured student lookup speed, real PDF layout or a 90% score on any course examination. Those semantic and physical checks remain explicit execution duties.
+
+
+## 2026-11-13: representative-by-family acceptance
+
+This update supersedes the preceding exhaustive-default policy. The installed skill and checkout now default to full source classification with actual attempts only for a representative set, retaining distinctions that change methods, preconditions, boundaries, outputs or template combinations. Exhaustive per-question acceptance and its unchanged JSON checker are opt-in only. Layout-only edits do not trigger content re-solving; content repairs retest affected representatives and shared dependencies.
+
+A bounded read-only policy scenario was run before and after the edit using one additional agent (`/root/check_sampling_rule`). Scenario: 120 questions comprising 100 data-only linear-search repetitions, 10 new-array reversal questions and 10 in-place reversal questions, followed by a font-size-only edit. Before the change, the agent applied the existing exhaustive rule to all 120 questions. After re-reading the revised instructions, it selected three base representatives when no other consequential distinctions exist, adding cases only for uncovered important boundaries; it kept the other 117 as classified but untested. It correctly limited font edits to final rendering/effective font size/affected navigation checks, did not invoke the legacy JSON checker by default, and retained exhaustive mode when expressly requested.
+
+This was a small before/after interpretation check using the same reviewer, not a fresh blinded evaluation, real course acceptance, measured token saving, or evidence that three questions suffice for any real course. No course questions were solved and no sheet acceptance was rerun.
+
+Both source and installed skill passed quick_validate.py with Python UTF-8 mode. The four edited skill documents match byte-for-byte; 17 local Markdown links within the skill resolve. Existing layout/font requirements were checked unchanged. The strict JSON checker and its tests were not modified or rerun in this documentation-only change. Previous historical validation records remain intact.
+
+
+## 2026-11-13: Cheatsheet Master naming and publication checks
+
+Renamed the skill directory and frontmatter to `cheatsheet-master`, display title to `Cheatsheet Master`, and invocation to `$cheatsheet-master`. Updated README references and added a GitHub installation example and old-name migration note. Repository URL remains unchanged. Source checkout and installed copy contain the same 11 non-cache skill files; old skill directories are absent.
+
+Before publication, both quick validators passed in UTF-8 mode, all 29 local Markdown links in the repository resolved, and the existing strict ledger checker passed its 20 synthetic unit/CLI tests from the renamed path. Name/display/default-prompt consistency and `git diff --check` passed. These checks do not constitute a new exam-sheet audit or measured quota savings.
