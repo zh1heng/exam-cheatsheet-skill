@@ -102,3 +102,12 @@ Both source and installed skill passed quick_validate.py with Python UTF-8 mode.
 Renamed the skill directory and frontmatter to `cheatsheet-master`, display title to `Cheatsheet Master`, and invocation to `$cheatsheet-master`. Updated README references and added a GitHub installation example and old-name migration note. Repository URL remains unchanged. Source checkout and installed copy contain the same 11 non-cache skill files; old skill directories are absent.
 
 Before publication, both quick validators passed in UTF-8 mode, all 29 local Markdown links in the repository resolved, and the existing strict ledger checker passed its 20 synthetic unit/CLI tests from the renamed path. Name/display/default-prompt consistency and `git diff --check` passed. These checks do not constitute a new exam-sheet audit or measured quota savings.
+
+
+## 2026-11-13: GitHub-distributed Codex plugin 1.0.0
+
+Added root `plugin.json`, a matching `.codex-plugin/plugin.json` compatibility manifest, and `.agents/plugins/marketplace.json` for `zh1heng-study-tools`. The marketplace resolves `cheatsheet-master` from the repository root. The plugin packages the existing skill without MCP services, connections or hooks. README documents source registration, desktop installation, optional CLI installation, updating and standalone-skill fallback.
+
+On codex-cli 0.167.0-alpha.4.1, a clean isolated CODEX_HOME and a package-only copy were used to run marketplace add, available-plugin listing, plugin add and installed-plugin listing. All exited successfully; the installed listing reported `cheatsheet-master@zh1heng-study-tools`, version `1.0.0`, installed and enabled. All 11 non-cache skill files in the installation matched the source. Portable/compatibility metadata and local links were checked for consistency. No actual user plugin configuration was changed.
+
+This verifies local CLI discovery and installation, not every client version or the desktop UI. No exam-sheet generation or expensive representative/full-question acceptance was rerun. The repository is a custom GitHub marketplace, not a listing in the universal public plugin directory.

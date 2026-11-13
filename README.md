@@ -2,7 +2,7 @@
 
 把课程资料整理成**看见题目就能找到入口、判断方法并写出答案**的考试小抄。
 
-这是一个可复用的 AI skill 项目。适合制作、审查和迭代考试允许携带的 reference sheet，也可以用于考前复习。输入课程范围、讲义、题目和版面限制；输出小抄内容、可编辑源文件、打印文件（环境支持时）和验证记录。
+这是一个可通过 GitHub 分发的 Codex 插件，也保留独立 skill 安装方式。适合制作、审查和迭代考试允许携带的 reference sheet，也可以用于考前复习。输入课程范围、讲义、题目和版面限制；输出小抄内容、可编辑源文件、打印文件（环境支持时）和验证记录。
 
 ## 方法
 
@@ -25,7 +25,45 @@
 
 默认示例采用“英文识题定位、中文理解与判断、英文作答”，让语言各自承担用途，避免整段重复翻译挤占版面；实际使用时按学生熟练度、题面语言与考试要求调整。代码和数学符号保留题设表示。
 
-## 使用
+## 安装插件（推荐）
+
+需要支持 `codex plugin marketplace` 的 Codex 版本。先在终端添加 GitHub 插件来源：
+
+```bash
+codex plugin marketplace add zh1heng/exam-cheatsheet-skill --ref main
+```
+
+随后重启或刷新 Codex 桌面端，打开插件目录，选择 **Zh1heng Study Tools** 来源，找到 **Cheatsheet Master** 并安装。若你的版本没有自定义插件来源入口，请更新客户端，或使用下面的独立 skill 安装方式。
+
+支持 `codex plugin add` 的 CLI 还可以直接安装：
+
+```bash
+codex plugin add cheatsheet-master@zh1heng-study-tools
+```
+
+安装后，在新聊天中选择 **Cheatsheet Master** 插件，提供课程资料文件夹及考试小抄限制，然后说：
+
+```text
+使用小抄高手，根据我的课程资料制作考试小抄。
+先核对考试范围、纸张大小和单双面限制，再生成可用初稿。
+验收时按题型选代表题实际作答，同类仅换数据的题不重复做。
+```
+
+插件内部打包的 skill 名称仍为 `cheatsheet-master`；不同客户端可能显示带插件命名空间的名称，以实际选择器为准。不必手动复制 skill 文件夹。若已安装独立版，建议保留一种启用方式，避免重复显示或加载不同版本。
+
+更新 GitHub 来源：
+
+```bash
+codex plugin marketplace upgrade zh1heng-study-tools
+```
+
+刷新来源后按客户端提示更新插件；必要时重新执行安装命令，并在新聊天中使用。不要假定仅推送 GitHub 就会自动刷新每位用户已安装的缓存。
+
+本插件只有技能、参考资料和可选验收脚本，没有 MCP 服务、账号连接或自动运行的 hooks。制作 PDF/DOCX 依赖宿主可用的文档工具；脚本需要 Python 3。它不会自带你的课件，也不会绕过宿主的模型额度。这里只通过 GitHub 自定义来源分发，未上架官方公共目录。
+
+打包格式和来源管理参见 [官方插件文档](https://developers.openai.com/plugins/build/plugins)。
+
+## 单独安装 skill（兼容方式）
 
 项目中的 skill 位于 [`skills/cheatsheet-master`](skills/cheatsheet-master/SKILL.md)。把整个 `cheatsheet-master` 文件夹复制到所用 AI 工具支持的 skills 目录，或在对话中明确提供该 `SKILL.md` 和相邻参考文件。不同客户端的自动发现方式可能不同。
 
@@ -47,6 +85,10 @@ Codex 用户可以直接发送以下安装请求：
 > 使用 $cheatsheet-master，检查这些题目能否在我的小抄上直接找到入口。分别报告内容缺失、定位困难、步骤不足和排版问题，只修改我指定的部分。
 
 ## 项目内容
+
+- [`plugin.json`](plugin.json)：标准插件清单与显示信息。
+- [`.codex-plugin/plugin.json`](.codex-plugin/plugin.json)：Codex 兼容清单。
+- [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json)：GitHub 插件来源目录。
 
 - [`SKILL.md`](skills/cheatsheet-master/SKILL.md)：何时使用、制作流程与交付要求。
 - [`references/entry-and-audit.md`](skills/cheatsheet-master/references/entry-and-audit.md)：条目结构、覆盖表与验证标准。

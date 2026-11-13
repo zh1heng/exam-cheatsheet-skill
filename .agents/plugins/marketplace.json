@@ -1,0 +1,20 @@
+{
+  "name": "zh1heng-study-tools",
+  "interface": {
+    "displayName": "Zh1heng Study Tools"
+  },
+  "plugins": [
+    {
+      "name": "cheatsheet-master",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

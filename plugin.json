@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cheatsheet-master",
+  "version": "1.0.0",
+  "description": "Create, audit, and revise exam reference sheets using course evidence and representative-question checks.",
+  "author": {
+    "name": "zh1heng",
+    "url": "https://github.com/zh1heng"
+  },
+  "homepage": "https://github.com/zh1heng/exam-cheatsheet-skill",
+  "repository": "https://github.com/zh1heng/exam-cheatsheet-skill",
+  "keywords": [
+    "education",
+    "exam",
+    "cheatsheet",
+    "study"
+  ],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Cheatsheet Master",
+        "shortDescription": "Create and improve exam reference sheets",
+        "longDescription": "Build exam reference sheets from course materials, with question-based navigation, representative-question checks, and printable layout review. 小抄高手：按题型组织、代表题验收、逐步改进。",
+        "developerName": "zh1heng",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://github.com/zh1heng/exam-cheatsheet-skill",
+        "supportURL": "https://github.com/zh1heng/exam-cheatsheet-skill/issues",
+        "defaultPrompt": [
+          "使用小抄高手，根据我提供的课程资料和考试限制制作考试小抄。",
+          "使用小抄高手，按题型选代表题检查并改进已有小抄。"
+        ],
+        "brandColor": "#2563EB"
+      }
+    }
+  }
+}
